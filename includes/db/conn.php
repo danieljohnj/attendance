@@ -6,7 +6,7 @@
     //$pass = '';
    // $charset = 'utf8mb4';
 
-    remote database connection
+    //remote database connection
     $host = 'sql.freedb.tech';
     $db =   'freedb_php_remote_sql';
     $user = 'freedb_mysqltest';
