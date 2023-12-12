@@ -7,11 +7,11 @@
     $charset = 'utf8mb4';
 
     //remote database connection
-    //$host = 'sql.freedb.tech';
-    //$db =   'freedb_php_remote_sql';
-    //$user = 'freedb_mysqltest';
-    //$pass = '8Ets62#%DZZpEc$';
-    //$charset = 'utf8mb4';
+    $host = 'sql.freedb.tech';
+    $db =   'freedb_php_remote_sql';
+    $user = 'freedb_mysqltest';
+    $pass = '8Ets62#%DZZpEc$';
+    $charset = 'utf8mb4';
 
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 
