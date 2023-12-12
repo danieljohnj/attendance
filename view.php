@@ -4,6 +4,8 @@
     $title='View';
     require_once 'includes/header.php';
     require_once 'includes/db/conn.php';
+    require_once 'includes/auth_check.php';
+
 
    //get attendee by id
    if(!isset($_GET['id'])){

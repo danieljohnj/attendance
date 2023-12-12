@@ -33,10 +33,10 @@
                         return false;
                     }
                 }
-                //check why all records are updated
+                
                 public function editAttendee($id, $fname, $lname, $dob, $email, $contact, $specialty){
                         try{
-                                $sql = "UPDATE `attendee` SET `firstname`= :fname,`lastname`= :lname,`dateofbirth`= :dob,`email`= :email,`contactnumber`= :contact,`specialty_id`= :specialty WHERE :id";
+                                $sql = "UPDATE `attendee` SET `firstname`= :fname,`lastname`= :lname,`dateofbirth`= :dob,`email`= :email,`contactnumber`= :contact,`specialty_id`= :specialty WHERE attendee_id = :id";
                                 $stmt = $this->db->prepare($sql);
                                 //binds all placeholder to the actual value
                                 $stmt->bindparam(':id' ,$id);                          
@@ -105,6 +105,23 @@
                         return true;
                 
                     
+                    }catch(PDOException $e) {
+                        echo $e->getMessage();
+                        return false;
+
+                    }
+
+                }
+
+                public function getSpecialtyById($id){
+                    try{
+                        $sql = "SELECT * FROM `specialties` where specialty_id = :id";
+                        $stmt = $this->db->prepare($sql);
+                        $stmt->bindparam(':id', $id);
+                        $stmt->execute();
+                        $result = $stmt->fetch();
+                        return $result;
+
                     }catch(PDOException $e) {
                         echo $e->getMessage();
                         return false;

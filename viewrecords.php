@@ -4,6 +4,7 @@
     $title='View Records';
     require_once 'includes/header.php';
     require_once 'includes/db/conn.php';
+    require_once 'includes/auth_check.php';
     //get all attendees
     $results = $crud->getAttendees();
 ?>

@@ -4,6 +4,8 @@
     $title='Edit Record';
     require_once 'includes/header.php';
     require_once 'includes/db/conn.php';
+    require_once 'includes/auth_check.php';
+
     $results = $crud->getSpecialties();
 
     if(!isset($_GET['id'])){
