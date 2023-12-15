@@ -21,6 +21,8 @@
 
         
 ?>
+<img src=" <?php echo empty($result['avatar_path']) ? "uploads/Activity Diagram.PNG" : $result['avatar_path'];?>" class= "rounded-circle" style="width: 20%; height: 20%" />
+
 <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">

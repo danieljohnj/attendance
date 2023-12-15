@@ -1,7 +1,6 @@
 
-    <div id="footer">
-        <?php echo 'copyright ' . date('y'); ?>
-
+    <div id="footer" class="p-3 bg-primary text-white fixed-bottom">
+        <p class="text-center">Copyright &copy; - IT Conference Attendance System <?php echo date('Y'); ?></p>
     </div>
 
 </div>
@@ -19,8 +18,8 @@
               changeMonth: true,
               changeYear: true,
               yearRange: "-100:+0",
-              dateformat: "yyyy-mm-dd"
-              //remember to sort out this issue
+              dateFormat: "yyyy-mm-dd"
+              
             });
      } );
   </script>

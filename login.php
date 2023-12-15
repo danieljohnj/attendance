@@ -25,10 +25,10 @@
     }
 ?>
 
-<h1 class="text-centre"><?php echo $title ?> </h1>
+<h1 class="text-center"><?php echo $title ?> </h1>
 
 <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="post">
-        <table class="table table - sm">
+        <table class="table table-sm">
             <tr>
                 <td><label for="username"> User name: * </label></td>
                 <td><input type="text" name="username" class="form-control" id="username" value="<?php if($_SERVER['REQUEST_METHOD'] == 'POST') echo $_POST['username']; ?>">

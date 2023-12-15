@@ -17,8 +17,18 @@
         $email = $_POST['email'];
         $contact = $_POST['phone'];
         $specialty = $_POST['specialty'];
+
+        $orig_file = $_FILES["avatar"]["tmp_name"];
+        $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
+        $target_dir = 'uploads/';
+        $destination = "$target_dir$contact.$ext";
+        move_uploaded_file($orig_file,$destination);
+
+        //pause execution 
+        // exit();
+
         //call function to insert and track if success or not
-        $issuccess = $crud->insert($fname, $lname, $dob, $email, $contact, $specialty);
+        $issuccess = $crud->insert($fname, $lname, $dob, $email, $contact, $specialty, $destination);
         $specialtyName = $crud->getSpecialtyById($specialty);
         if($issuccess){
             sendemail::sendmail($email, 'Welcome to IT COnference 2019','you have registered successfully for this year IT conference');
@@ -60,7 +70,7 @@
             </div>
 
 -->
-
+<img src=" <?php echo $destination; ?>"class= "rounded-circle" style="width: 20%; height: 20%" />
 <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">

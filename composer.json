@@ -1,5 +1,7 @@
 {
     "require": {
-        "sendgrid/sendgrid": "^8.1"
+        "sendgrid/sendgrid": "^8.1",
+        "sendgrid/php-http-client": "^4.1",
+        "starkbank/ecdsa": "0.0.5"
     }
 }

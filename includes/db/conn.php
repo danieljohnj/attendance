@@ -1,10 +1,10 @@
 <?php
 //development connection (local)
-    $host = '127.0.0.1';
-    $db =   'attendance_db';
-    $user = 'root';
-    $pass = '';
-    $charset = 'utf8mb4';
+    //$host = '127.0.0.1';
+    //$db =   'attendance_db';
+    //$user = 'root';
+    //$pass = '';
+   // $charset = 'utf8mb4';
 
     //remote database connection
     $host = 'sql.freedb.tech';
