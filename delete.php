@@ -23,4 +23,3 @@
     }
 
 
-//show records before delete

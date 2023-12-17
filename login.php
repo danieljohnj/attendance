@@ -11,7 +11,7 @@
         $password = $_POST['password'];
         $new_password = md5($password.$username);
 
-        $result = $user->getUser($username, $new_password);
+        $result = $users->getUser($username, $new_password);
         if(!$result){
             echo '<div class="alert alert-danger">user name or Password is incorrect! Please try again. </div>'; 
 
